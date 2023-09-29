@@ -1,0 +1,287 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+body p {
+  font-size: 18px;
+}
+/* Le header du site */
+
+header,nav,section,footer {
+  padding: 20px;
+}
+
+header {
+  background-color: #c28686;
+  height: 170px;
+}
+
+header h1 {
+  color: white;
+  font-family: "Arial", sans-serif;
+  /* font-size: 28px; */
+  font-weight: normal;
+}
+
+header p {
+  color: black;
+  font-size: 18px;
+}
+
+/* La nav du site */
+nav {
+  padding: 20px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex; /* Met les éléments de la liste en ligne */
+  list-style: none; /* Supprime les puces de liste */
+  padding: 0; /* Supprime le padding par défaut de la liste */
+  margin: 0; /* Supprime la marge par défaut de la liste */
+}
+
+nav li {
+  margin-right: 20px; /* Ajoute de l'espace entre les éléments de la liste */
+}
+
+/* L'image dans le nav */
+.nav-image img {
+  max-width: 50px; /* Ajuste la largeur de l'image */
+  border-radius: 100px;
+  height: auto;
+}
+
+nav a:hover {
+  color: #8b0000;
+}
+
+/* animation */
+nav ul li a {
+  text-decoration: none;
+  color: #8b0000;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #8b0000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.4s ease; /* Ajout de la transition */
+}
+nav ul li a:hover::after {
+  width: 100%; /* Largeur complète au survol */
+}
+/* LE MENU DANS LE HAMBUREGR */
+/* LE MENU DANS LE HAMBUREGR */
+/* LE MENU DANS LE HAMBUREGR */
+.menu-icon {
+  cursor: pointer;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto; /* move the hamburger to the right */
+  display: none;
+  /* background-color:green; */
+}
+
+.menu-icon__line {
+  height: 2.5px;
+  width: 25px;
+  background-color: black;
+  margin: 3px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-icon.open .menu-icon__line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-icon.open .menu-icon__line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open .menu-icon__line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+/* LE BODY */
+body .official {
+  font-size: 4px;
+}
+
+/* LE BODY DE LA PAGE DE L'HISTOIRE COMMENCE ICI */
+
+.GET {
+  margin-top: 1em;
+}
+.DOWN {
+  margin-top: 1.5em;
+}
+
+.RIGHT {
+  margin: 0 15em;
+  width: 100%;
+  /* margin-top:-15em; */
+  /* position:absolute; */
+}
+
+.text-center {
+  width: 100%;
+  height: 100%;
+}
+/* La class du titre right */
+.right {
+  margin-left: 8%;
+}
+
+h1 .second-titre {
+  color: #2e0101;
+  margin-top: -10em;
+}
+
+/* LE BODY */
+body p {
+  font-size: 18px;
+}
+
+/* LES IMAGES DE CETTE PAGEGE */
+/* Le survole de ces images des superviseurs */
+
+.c2 {
+  width: 400px;
+  height: 350px;
+  display: block;
+  margin: 0 auto;
+}
+
+.local {
+  text-align: center;
+}
+
+/* Le survole de ces images des superviseurs */
+.c3 {
+  width: 160px;
+  height: 160px;
+  transition: 1s ease-out;
+}
+.c3:hover {
+  width: 190px;
+  height: 190px;
+  flex: center;
+}
+
+/* ACCORDION A L'INTERIEUR DE l'AUTRE */
+.gère {
+  background-color: white;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active,
+.gère:hover {
+  background-color: #ccc;
+}
+
+.gère:after {
+  content: "\002B";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.seeY ul li {
+  list-style: none;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.seeY ul li a {
+  text-decoration: none;
+  border-bottom: 1px dotted black;
+  font-size: 18px;
+  font-weight: 400;
+  color: gray;
+}
+
+/* Special menu Hamburger */
+/* Special menu Hamburger */
+/* Special menu Hamburger */
+@media screen and (max-width: 750px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar-links {
+    margin-top: 83px;
+    top: 1%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    position: absolute;
+    transition: all 0.5s;
+    left: 0%;
+  }
+
+  .menu {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    color: white;
+    background: black;
+    opacity: 0.8;
+    z-index: 20;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 10%;
+    transition: all 0.5s;
+    flex-direction: column;
+    left: 0%;
+    cursor: pointe;
+  }
+
+  .menu li {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  .menu li a {
+    display: inline-block;
+    color: white;
+  }
+}

@@ -1,0 +1,282 @@
+/* la propriété flex-direction:column permet d'aligner des element en cologne quand je le veux et où je le veux meilleur pour les mediasqueries */
+
+/* body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+body p {
+  font-size: 18px;
+}
+/* Le header */
+header,
+nav,
+section,
+footer {
+  padding: 20px;
+}
+
+header {
+  background-color: #c28686;
+  height: 150px;
+}
+
+header h1 {
+  color: white;
+  font-family: "Arial", sans-serif;
+  /* font-size: 28px; */
+  font-weight: normal;
+}
+
+header p {
+  color: black;
+  font-size: 18px;
+}
+
+/* La nav du site */
+nav {
+  padding: 20px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex; /* Met les éléments de la liste en ligne */
+  list-style: none; /* Supprime les puces de liste */
+  padding: 0; /* Supprime le padding par défaut de la liste */
+  margin: 0; /* Supprime la marge par défaut de la liste */
+}
+
+nav li {
+  margin-right: 20px; /* Ajoute de l'espace entre les éléments de la liste */
+}
+
+/* L'image dans le nav */
+
+.nav-image img {
+  max-width: 50px; /* Ajuste la largeur de l'image */
+  border-radius: 100px;
+  height: auto;
+}
+
+nav a:hover {
+  color: #8b0000;
+}
+
+/* animation */
+nav ul li a {
+  text-decoration: none;
+  color: #8b0000;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #8b0000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.4s ease; /* Ajout de la transition */
+}
+
+nav ul li a:hover::after {
+  width: 100%; /* Largeur complète au survol */
+}
+/* LE MENU DANS LE HAMBUREGR */
+/* LE MENU DANS LE HAMBUREGR */
+/* LE MENU DANS LE HAMBUREGR */
+.menu-icon {
+  cursor: pointer;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto; /* move the hamburger to the right */
+  display: none;
+  /* background-color:green; */
+}
+
+.menu-icon__line {
+  height: 2.5px;
+  width: 25px;
+  background-color: black;
+  margin: 3px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-icon.open .menu-icon__line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-icon.open .menu-icon__line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open .menu-icon__line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+/* LE SOULIGNEMENT AVEC LA CLASSE UNDERLINE */
+.underline {
+  position: relative;
+  display: inline-block;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 4px;
+  width: 50px; /* Ajustez cette valeur selon la longueur souhaitée */
+  background-color: #8b0000;
+}
+
+section h1 {
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+
+.do {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+/* LE CONTENU DE LA GALERIE PHOTO */
+/* LE CONTENU DE LA GALERIE PHOTO */
+/* LE CONTENU DE LA GALERIE PHOTO */
+
+#myBtnContainer {
+  margin: 50px;
+}
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  /* font-size: 50px; */
+  word-break: break-all;
+}
+
+.row {
+  margin: 20px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: center;
+  background: #f1f1f1;
+  width: 33.33%;
+  display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+.row {
+  margin: auto;
+  width: 100%;
+  padding: 30px 0;
+  margin-top: 2rem;
+}
+
+/* Special menu Hamburger */
+/* Special menu Hamburger */
+/* Special menu Hamburger */
+@media screen and (max-width: 750px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar-links {
+    margin-top: 83px;
+    top: 1%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    position: absolute;
+    transition: all 0.5s;
+    left: 0%;
+  }
+
+  .menu {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    color: white;
+    background: black;
+    opacity: 0.8;
+    z-index: 20;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 10%;
+    transition: all 0.5s;
+    flex-direction: column;
+    left: 0%;
+    cursor: pointe;
+  }
+
+  .menu li {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  .menu li a {
+    display: inline-block;
+    color: white;
+  }
+}

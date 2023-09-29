@@ -1,0 +1,511 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+	overflow-x:hidden;
+}
+
+body p{
+    font-size: 18px;
+    
+}
+/* Le header du site */
+
+header, nav, section, footer {
+    padding: 20px;
+	
+}
+
+header {
+  background-color:#C28686;
+  height:auto;
+}
+
+header h1 {
+   color:white; 
+   font-family: 'Arial', sans-serif;
+   /* font-size: 28px; */
+   font-weight: normal;
+}
+
+header p {
+   color:black; 
+   font-size:18px;
+}
+
+/* La nav du site */
+nav {
+    padding: 20px;
+    /*  */
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+
+nav ul {
+    display: flex; /* Met les éléments de la liste en ligne */
+    list-style: none; /* Supprime les puces de liste */
+    padding: 0; /* Supprime le padding par défaut de la liste */
+    margin: 0; /* Supprime la marge par défaut de la liste */
+	
+}
+
+nav li {
+    margin-right: 20px; /* Ajoute de l'espace entre les éléments de la liste */
+}
+
+
+
+nav a {
+    text-decoration: none;
+	color:#C28686;
+}
+
+/* L'image dans le nav */
+
+.nav-image img {
+    max-width: 50px; 
+    border-radius:100px;
+	height: auto;
+}
+nav a:hover {
+    color: #8B0000;
+}
+
+/* animation */
+nav ul li a {
+    text-decoration: none;
+    color:#8B0000;
+    font-size:18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #8B0000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.4s ease; /* Ajout de la transition */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Largeur complète au survol */
+}
+/* LE MENU DANS LE HAMBUREGR */
+/* LE MENU DANS LE HAMBUREGR */
+/* LE MENU DANS LE HAMBUREGR */
+.menu-icon {
+  cursor: pointer;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto; /* move the hamburger to the right */
+  display:none;
+  /* background-color:green; */
+}
+
+.menu-icon__line {
+  height: 2.5px;
+  width: 25px;
+  background-color: black;
+  margin: 3px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-icon.open .menu-icon__line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-icon.open .menu-icon__line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open .menu-icon__line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+/* Je gere le check et la div error */
+/* Je gere le check et la div error */
+
+.inputBox .hot1
+{
+	position:absolute;
+	right:60px;
+	margin-top:28px;
+	color:#09c372;
+	display:none;
+}
+.inputBox .hot2
+{
+	position:absolute;
+	right:60px;
+	margin-top:-50px;
+	color:#ff0000;
+	display:none;
+}
+
+.inputBox .hot3
+{
+	position:absolute;
+	right:60px;
+	margin-top:28px;
+	color:#09c372;
+	display:none;
+}
+.inputBox .hot4
+{
+	position:absolute;
+	right:60px;
+	margin-top:-50px;
+	color:#ff0000;
+	display:none;
+}
+
+.inputBox .hot5
+{
+	position:absolute;
+	right:60px;
+	margin-top:28px;
+	color:#09c372;
+	display:none;
+}
+
+.inputBox .hot6
+{
+	position:absolute;
+	right:60px;
+	margin-top:-49px;
+	color:#ff0000;
+	display:none;
+}
+
+
+.inputBox .error-1
+{
+	color:red;
+	font-size:12px;
+	/* display:none; */
+}
+
+
+.inputBox .error-2
+{
+	color:red;
+	font-size:12px;
+	/* display:none; */
+}
+
+.inputBox .error-3
+{
+	color:red;
+	font-size:12px;
+	/* display:none; */
+}
+
+/* Le slider */
+/* Le slider */
+/* Le slider */
+.Sliding {
+    overflow: hidden;
+    position: relative;
+	/* width:100%; */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin:0 auto;
+	width: 90%;
+	
+}
+
+.slider {
+    width:100%;
+    overflow: hidden;
+    background-color: none;
+}
+
+.slides-container {
+    display: flex;
+    transition: transform 15s linear infinite;
+}
+
+.slide {
+    width: 100%;
+}
+
+.slide img {
+    width: 333px;
+    height: 300px;
+    animation: glisse 8s infinite;
+}
+
+@keyframes glisse {
+    100% {
+        transform: translateX(0);
+    }
+
+    10% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(-500px);
+    }
+
+    43% {
+        transform: translateX(-500);
+    }
+
+    66% {
+        transform: translateX(-1000px);
+    }
+
+    75% {
+        transform: translateX(-1000px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* La section message */
+.coordinator-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+	width: 85.5%;
+	margin:0 auto;
+}
+
+.coordinator-info {
+    display: flex;
+    align-items: center;
+}
+
+.coordinator-info img {
+    max-width: 250px; /* Ajuste la largeur de l'image selon tes besoins */
+    height:230px;
+	border-radius: 50%; /* Pour une forme circulaire, si nécessaire */
+    margin-right: 20px; /* Marge à droite de l'image */
+}
+
+.coordinator-info p {
+    font-family: "Arial", sans-serif; /* Police de caractères */
+    font-size: 18px; /* Taille de la police */
+    line-height: 1.6; /* Espacement entre les lignes */
+    margin-bottom: 20px; /* Marge en bas de chaque paragraphe */
+    text-align: justify; /* Justification du texte */
+}
+
+p:first-of-type {
+    margin-top: 0; /* Suppression de la marge supérieure pour le premier paragraphe */
+}
+
+p:last-of-type {
+    margin-bottom: 0; /* Suppression de l'espace sous le dernier paragraphe */
+}
+
+/* La section v */
+.v
+{
+	width:88%;
+    margin:0 auto; 
+}
+.v p
+{
+	color:#8B0000;
+}
+/* Les videos */
+.video-section {
+    padding: 20px;
+}
+
+.videos-grid {
+    display: flex;
+    flex-wrap: wrap;
+	justify-content:center;
+    gap: 20px;
+	
+}
+
+.video-item {
+    width: 45%; /* Ajuste la largeur de chaque vidéo */
+	
+}
+
+.video-item video {
+    width: 100%; /* Pour que la vidéo prenne toute la largeur du conteneur */
+	height: 350px; /* Hauteur fixe pour toutes les vidéos */
+    object-fit: cover; /* Ajuste la vidéo pour remplir la taille spécifiée */
+}
+
+
+
+
+
+/* Le formulaire de contact */
+.contact-form {
+    background-color:#f2f2f2;
+    padding: 20px;
+    max-width: 480px;
+	height:auto;
+    align-self: flex-end; /* Place le formulaire à droite */
+	margin:80px;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+}
+
+/* Style pour les champs de formulaire */
+.contact-form input[type="text"], .contact-form input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 2px solid #C28686;
+    border-radius: 5px;
+    font-size: 16px;
+	resize:none;
+}
+
+/* Style pour le bouton du formulaire */
+.contact-form input[type="submit"] {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #C28686;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #005F6B;
+}
+
+/* La div des messages d'erreur */
+.custom-alert {
+    position: fixed;
+    top: 5%; /* Position au milieu de la page en haut/bas */
+    left: 50%; /* Position au milieu de la page à gauche/droite */
+    transform: translate(-50%, -50%); /* Centrage */
+    width: 600px;
+    text-align: center; /* Pour centrer le texte */
+    }
+/* Les medias queries */
+@media screen and (max-width: 1299px) {
+	.coordinator-section .coordinator-info{
+		
+    display: flex;
+    align-items: center;
+	flex-direction:column;
+	margin-top:70px;
+}
+
+@media screen and (max-width: 999px){
+	.videos-grid {
+    display: flex;
+    flex-direction: column;
+	/* background-color:red; */
+}
+
+.video-item {
+    width: 600px; /* Ajuste la largeur de chaque vidéo */
+	margin:0 auto;
+
+}
+
+
+}@media screen and (max-width: 645px){
+	
+.video-item {
+    width: 90%; /* Ajuste la largeur de chaque vidéo */
+	margin:0 auto;
+
+	}
+}
+
+}@media screen and (max-width: 512px){
+	
+.video-item {
+    width: 90%; /* Ajuste la largeur de chaque vidéo */
+	margin:0 auto;
+
+	}
+	
+.contact-form {
+    background-color:#f2f2f2;
+    padding: 20px;
+    max-width: 700px;
+    align-self: flex-end; /* Place le formulaire à droite */
+	margin:80px;
+	}
+}
+
+
+/* Special menu Hamburger */
+/* Special menu Hamburger */
+/* Special menu Hamburger */
+@media screen and (max-width: 750px) {
+	.menu-icon {
+		display:block;
+	 }
+  
+  
+  .navbar-links
+  {
+	margin-top:83px;
+    top: 1%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+	display:none;
+	position:absolute;
+	transition:all .5s;
+	left:0%;
+}
+  
+.menu
+	{
+		position:absolute;
+		width:100%;
+		height:auto;
+		color:white;
+		background:black;
+		opacity:0.8;
+		z-index:20;
+		text-align:center;
+		padding:20px;
+		padding-bottom:10%;
+		transition:all .5s;
+		flex-direction: column;
+		left:0%;
+		cursor:pointe;
+	}
+	
+  .menu li {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+  
+  .menu li a {
+    display:inline-block;
+	color:white;
+  }
+}
